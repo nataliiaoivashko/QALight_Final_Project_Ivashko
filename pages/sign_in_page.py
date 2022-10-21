@@ -11,7 +11,7 @@ class SignInPage(BasePage):
 
     @log_decorator
     def sign_in(self, user):
-        """Sign in as the random user and navigate to welcome page"""
+        """Sign in as the given user and navigate to welcome page"""
         # clicking on Sign In Link on top right
         self.click(xpath=self.constants.SIGN_IN_LINK_XPATH)
         # Fill login info: email and password

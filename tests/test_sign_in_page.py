@@ -51,6 +51,6 @@ class TestSignInPage:
         self.log.info("Logged in as User with email %s", existing_user.email)
         self.log.info("Logged in as User with password %s", existing_user.password)
 
-        # Verify error
+        # Verify login
         hello_user_page.verify_successful_sign_in(existing_user.firstname, existing_user.lastname)
         self.log.info("Verified successful sign in")

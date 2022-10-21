@@ -90,3 +90,9 @@ class User:
         self.lastname = "Ivashko" if not lastname else lastname
         self.email = "nataliiaoivashko@gmail.com" if not email else email
         self.password = "1qaz!QAZ" if not password else password
+
+
+class Product:
+
+    def __init__(self, xpath=""):
+        self.xpath = xpath

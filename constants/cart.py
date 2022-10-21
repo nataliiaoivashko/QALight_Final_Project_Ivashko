@@ -1,0 +1,12 @@
+class CartConstants:
+    ADD_TO_CART_BUTTON_XPATH = ".//span[contains(.,'Add to Cart')]"
+    ADDED_TO_CART_GREEN_BANNER_XPATH = ".//div[@data-bind='html: $parent.prepareMessageForHtml(message.text)'][contains(.,'You added Overnight Duffle to your shopping cart.')]"
+    ADDED_TO_CART_GREEN_BANNER_TEXT = "You added Affirm Water Bottle to your shopping cart."
+    CART_ICON_XPATH = ".//a[@class='action showcart']"
+    CART_VIEW_AND_EDIT_LINK_XPATH = ".//span[contains(.,'View and Edit Cart')]"
+    CART_PRODUCT_VIEW_XPATH = "(//a[contains(.,'Affirm Water Bottle')])[2]"
+    CART_PRODUCT_VIEW_TEXT = "Affirm Water Bottle"
+    GEAR_Affirm_Water_Bottle_XPATH = ".//a[@title='Affirm Water Bottle '][contains(.,'Affirm Water Bottle')]"
+    GEAR_fusion_backpack_XPATH = ".//a[@class='product-item-link'][contains(.,'Fusion Backpack')]"
+    PRODUCT_UNAVAILABLE_RED_BANNER_XPATH = ".//div[contains(@data-bind,'html: $parent.prepareMessageForHtml(message.text)')]"
+    PRODUCT_UNAVAILABLE_RED_BANNER_TEXT = "The requested qty is not available"
