@@ -11,3 +11,4 @@ class CartPage(BasePage):
         super().__init__(driver)
         self.constants = GearConstants()
         self.menu_page = CartPage(self.driver)
+        # this class is not yet used

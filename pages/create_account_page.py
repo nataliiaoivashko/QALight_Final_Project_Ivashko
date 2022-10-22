@@ -12,9 +12,9 @@ class CreateAccountPage(BasePage):
     @log_decorator
     def fill_registration_fields(self, user):
         """click on create an account button and fill necessary fields"""
-        """clicking on Create an Account button"""
+        # clicking on Create an Account button
         self.click(xpath=self.constants.CREATE_ACCOUNT_LINK_XPATH)
-        """filling firstname, lastname, email and password"""
+        # filling firstname, lastname, email and password
         self.fill_field(xpath=self.constants.CREATE_ACCOUNT_FIRSTNAME_FIELD_XPATH, value=user.firstname)
         self.fill_field(xpath=self.constants.CREATE_ACCOUNT_LASTNAME_FIELD_XPATH, value=user.lastname)
         self.fill_field(xpath=self.constants.CREATE_ACCOUNT_EMAIL_FIELD_XPATH, value=user.email)

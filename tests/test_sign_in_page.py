@@ -8,7 +8,7 @@ from pages.sign_in_page import SignInPage
 
 
 class TestSignInPage:
-    log = logging.getLogger("[SignInPage]")
+    log = logging.getLogger("[TestSignInPage]")
 
     @pytest.fixture(scope="function")
     def sign_in_page(self):
@@ -25,7 +25,7 @@ class TestSignInPage:
         """
         - Steps:
             - open start page, click "Sign In" link (top right corner)
-            - Fill Email & Password fields
+            - Fill Email & Password fields incorrectly
             - Click "Sign In" blue button
             - Verify that error message appears
         """
@@ -45,7 +45,7 @@ class TestSignInPage:
             - Click "Sign In" blue button
             - Verify that User has sign in successfully
         """
-        # Login as a user
+        # Login as an existing valid user
         hello_user_page = sign_in_page.sign_in(existing_user)
         self.log.info("Logging in as an existing user")
         self.log.info("Logged in as User with email %s", existing_user.email)

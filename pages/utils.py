@@ -75,7 +75,7 @@ class User:
         self.confirm_password = self.password if not confirm_password else confirm_password
 
     def fill_data1(self, firstname="", lastname="", email="", password=""):
-        """Fill user with sample data, HOWEVER password is INCORRECT ENTRY"""
+        """Fill user with sample data, HOWEVER password is INCORRECT ENTRY!"""
         # random_user1 from conftest file
         user = random_str()
         self.firstname = f"{user}{random_num()}" if not firstname else firstname
@@ -84,7 +84,7 @@ class User:
         self.password = f"{random_str(3)}{random_num_len()}" if not password else password  # too short password
 
     def fill_data2(self, firstname="", lastname="", email="", password=""):
-        """Fill user with existing account data"""
+        """Fill user with existing and correct account data"""
         # existing_user from conftest file
         self.firstname = "Nataliia" if not firstname else firstname
         self.lastname = "Ivashko" if not lastname else lastname
@@ -93,6 +93,7 @@ class User:
 
 
 class Product:
+    """this class I plan to use in a method for all products select and add"""
 
     def __init__(self, xpath=""):
         self.xpath = xpath

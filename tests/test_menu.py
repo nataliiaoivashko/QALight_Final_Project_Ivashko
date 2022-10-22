@@ -32,7 +32,7 @@ class TestMenuPage:
             - Existing User is logged in
         - Steps:
             - select "Gear" from the menu
-            - select a product
+            - select a product that is available
             - add it to Cart
             - go to Cart
         - Verify:
@@ -58,6 +58,7 @@ class TestMenuPage:
         # verify that Cart contains selected product
         gear_page.verify_cart_with_product()
         self.log.info("Verification that given product is inside the Cart")
+        # this test cannot be re-used. it is checking only 1 test case with 1 specific product
 
     def test_gear_unavailable_product_select(self, hello_page):
         """
@@ -82,3 +83,4 @@ class TestMenuPage:
         # verify confirmation message
         gear_page.verify_red_banner_product_unavailable()
         self.log.info("Product is unavailable red banner message verification")
+        # this test cannot be re-used. it is checking only 1 test case with 1 specific product

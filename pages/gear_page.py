@@ -21,6 +21,8 @@ class GearPage(BasePage):
         """select default available product"""
         self.click(xpath=self.constants.GEAR_Affirm_Water_Bottle_XPATH)
         self.log.info("selecting default product")
+        # this test cannot be re-used again. it works only for this specific product.
+        # todo: rewrite this test so it can be used with any product using class Product and maybe mapping
 
     @wait_until_ok
     def add_product_to_cart(self):
@@ -61,6 +63,8 @@ class GearPage(BasePage):
         """select unavailable product"""
         self.click(xpath=self.constants.GEAR_fusion_backpack_XPATH)
         self.log.info("selecting unavailable product")
+        # this test cannot be re-used again. it works only for this specific product.
+        # todo: rewrite this test so it can be used with any product using class Product and maybe mapping
 
     @wait_until_ok
     def verify_red_banner_product_unavailable(self):

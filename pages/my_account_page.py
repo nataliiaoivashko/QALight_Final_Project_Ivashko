@@ -13,7 +13,7 @@ class MyAccountPage(BasePage):
 
     @wait_until_ok(timeout=5, period=0.5)
     def verify_successful_registration(self, firstname, lastname):
-        """Verify successful registration using welcome message"""
+        """Verify successful registration using 1. welcome and 2. confirmation banner message"""
         firstname = firstname
         lastname = lastname
         assert self.get_element_text(self.constants.MY_ACCOUNT_PAGE_WELCOME_MSG_XPATH) == \

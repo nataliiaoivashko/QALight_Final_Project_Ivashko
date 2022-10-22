@@ -17,7 +17,7 @@ class SignInPage(BasePage):
         # Fill login info: email and password
         self.fill_field(xpath=self.constants.SIGN_IN_EMAIL_FIELD_XPATH, value=user.email)
         self.fill_field(xpath=self.constants.SIGN_IN_PASSWORD_FIELD_XPATH, value=user.password)
-        # Click button
+        # Click sign in button
         self.click(xpath=self.constants.SIGN_IN_BUTTON_XPATH)
         # return new page
         from pages.my_account_page import MyAccountPage

@@ -8,7 +8,7 @@ from pages.create_account_page import CreateAccountPage
 
 
 class TestCreateAccountPage:
-    log = logging.getLogger("[CreateAccountPage]")
+    log = logging.getLogger("[TestCreateAccountPage]")
 
     @pytest.fixture(scope="function")
     def create_account_page(self):
@@ -21,13 +21,12 @@ class TestCreateAccountPage:
         # Post-conditions
         driver.close()
 
-    def test_registration_error(self, create_account_page, random_user1):  # TEST 1
+    def test_registration_error(self, create_account_page, random_user1):
         """
-        Test Case 1 -  error during registration
+        Error during registration
         Steps:
-        - open main page
-        - click on "Create an Account" (top right)
-        - fill in first name, last name, email, password(incorrectly)
+        - open main page, & click on "Create an Account" (top right)
+        - fill fields: first name, last name, email, password (incorrectly)
         Verify:
         - error message for incorrect password appears
         """
@@ -41,14 +40,15 @@ class TestCreateAccountPage:
         create_account_page.verify_register_password_error()
         self.log.info("Password verification. Entered password %s", random_user1.password)
 
-    def test_registration_successful(self, create_account_page, random_user):  # TEST 2
+    def test_registration_successful(self, create_account_page, random_user):
         """
-        Test Case 2 -  normal registration
+        Normal registration
         Steps:
         - open main page, & click on "Create an Account" (top right)
-        - fill in first name, last name, email, password, confirm password
+        - fill fields: first name, last name, email, password, & confirm password
         - click on "Create an Account"
-        - Verify: welcome message with expected Username appears
+        Verify:
+        - welcome message with expected Username appears
         """
         # registration process for a user
         welcome_page = create_account_page.register_and_verify(random_user)
